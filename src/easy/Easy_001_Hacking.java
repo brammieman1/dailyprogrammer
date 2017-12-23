@@ -17,10 +17,11 @@ public class Easy_001_Hacking {
         String redditname = scanner.nextLine();
         scanner.close();
         System.out.println("Your name is " + name + " , you are " + age + "years old " + " and your username is " + redditname);
+        logging(name,age,redditname);
 
     }
 
-    public static void logging(String name, int age, String reddit){
+    private static void logging(String name, int age, String reddit){
         PrintStream output = null;
         try {
             output = new PrintStream(new File("data.txt"));
